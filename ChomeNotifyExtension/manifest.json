@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+
+  "name": "SiteKey Checker",
+  "description": "Checks if you have passed the splash page",
+  "version": "7.420",
+
+  "icons": {
+    "48": "batman.png"
+  },
+  "content_scripts":[
+    {
+      "matches":[
+        "<all_urls>"
+      ],
+      "js":["script.js"]
+    }
+  ],
+  "permissions": [
+    "notifications"
+  ],
+  "browser_action": {
+    "default_icon": "batman.png"
+  },
+
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "minimum_chrome_version": "32"
+}
